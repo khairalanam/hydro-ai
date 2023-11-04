@@ -9,8 +9,8 @@ Our project aims to harness the power of artificial intelligence to monitor and 
 - [WHY HYDRO-AI](#why-hydro-ai)
 - [FEATURES](#features)
 - [TECHSTACK](#techstack)
-- [CONTRIBUTING](#contributing)
 - [USAGE](#usage)
+- [CONTRIBUTING](#contributing)
 - [AUTHORS](#authors)
 
 ## WHY HYDRO-AI
