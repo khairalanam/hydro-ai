@@ -29,56 +29,74 @@ const heroInfo: HeroProps[] = [
 ---
 
 <section class="z-10">
-    <section id="carousel" class="w-full min-h-screen max-sm:max-h-screen flex justify-start relative overflow-x-hidden">
+    <section id="carousel" class="w-full h-screen overflow-x-hidden flex flex-col sm:flex-row">
         <section id="slider" class="flex h-full w-[300%] shrink-0 transition-all duration-[500ms] ease-in">
             {
                 heroInfo.map(hero => (
-                    <section class="basis-1/3 shrink-0 flex-1 w-1/3 flex max-sm:flex-col items-center justify-between">
-                        <div class="max-sm:min-w-full flex-1 h-full flex flex-col justify-center px-6 py-4 md:pl-14 md:py-0 md:pr-0 lg:pl-20 max-w-[50%]">
-                            <h1 class="">{hero.heroTitle}</h1>
-                            <h2 class="">{hero.heroSubtitle}</h2>
+                    <section class="basis-1/3 shrink-0 flex-1 w-1/3 flex items-center justify-between max-sm:flex-col md:flex-row max-sm:h-screen">
+                        <div class="max-sm:min-w-full flex-1 flex flex-col justify-center px-6 py-4 md:pl-14 md:py-0 md:pr-0 lg:pl-20 max-w-[50%] max-sm:w-full max-sm:min-h-1/2">
+                            <h1 class="text-lg md:text-xl lg:text-2xl font-bold">{hero.heroTitle}</h1>
+                            <h2 class="text-base md:text-lg lg:text-xl">{hero.heroSubtitle}</h2>
                         </div>
-                        <Image src={hero.imageSrc} alt="Water background" width={100} height={100} class="flex-1 max-h-screen min-h-screen max-sm:w-full" />
+                        <Image src={hero.imageSrc} alt="Water background" width={100} height={100} class="flex-1 md:h-screen max-sm:w-full sm:w-full max-sm:h-1/2" />
                     </section>
                 ))
             }
         </section>
         <section>
-            <span id="prev" class="absolute cursor-pointer top-3 left-3 border-2 border-purple-400 z-30">prev</span>
-            <span id="next" class="absolute cursor-pointer top-3 right-3 border-2 border-purple-400 z-30">next</span>
-        </section>
+            <span id="prev" class="absolute cursor-pointer top-1/2 bottom-1/2 left-3 z-30 max-sm:top-20">
+                <svg xmlns="http://www.w3.org/2000/svg" height="2.5em" width="2.5em" fill="white" viewBox="0 0 320 512">
+                    <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"/>
+                </svg>
+            </span>
+            <span id="next" class="absolute cursor-pointer top-1/2 bottom-1/2 right-3 z-30 max-sm:top-20">
+                <svg xmlns="http://www.w3.org/2000/svg" height="2.5em" width="2.5em" fill="white" viewBox="0 0 320 512">
+                    <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/>
+                </svg>
+            </span>
+        </section>        
     </section>
 </section>
+
+
 
 <script>
     const slider = document.querySelector("#slider") as HTMLTableSectionElement;
     const carousel = document.querySelector("#carousel") as HTMLTableSectionElement;
     const prev = document.querySelector("#prev")!;
     const next = document.querySelector("#next")!;
-    let direction: number = -1;
-    let isTransitioning: boolean = false;
+    var direction: number = -1;
 
     prev.addEventListener("click", () => {
-        if (!isTransitioning) {
-            if (direction === -1) {
-                slider.appendChild(slider.firstElementChild!);
-                direction = 1;
+        if (direction === -1) {
+            slider.appendChild(slider.firstElementChild!);
+            if (window.innerWidth <= 640) {
+                carousel.style.justifyContent = "none";
+                carousel.style.alignItems = "flex-end";
+            } else {
+                carousel.style.alignItems = "none";
+                carousel.style.justifyContent = "flex-end";
             }
-            carousel.style.justifyContent = "flex-end";
-            slider.style.transform = "translate(33.3%)";
         }
+        direction = 1;
+        slider.style.transform = "translate(33.3%)";
+        console.log(slider.firstElementChild);
     });
 
     next.addEventListener("click", () => {
-        if (!isTransitioning) {
-            if (direction === 1) {
-                slider.prepend(slider.lastElementChild!);
-                direction = -1;
+        if (direction === 1) {
+            slider.prepend(slider.lastElementChild!);
+            if (window.innerWidth <= 640) {
+                carousel.style.justifyContent = 'none';
+                carousel.style.alignItems = 'flex-start';
+            } else {
+                carousel.style.alignItems = 'none';
+                carousel.style.justifyContent = 'flex-start';
             }
-            direction = -1;
-            slider.style.transform = "translate(-33.3%)";
-            carousel.style.justifyContent = "flex-start";
         }
+        direction = -1;
+        slider.style.transform = 'translateX(-33%)';
+        console.log(slider.firstElementChild);
     });
 
     slider.addEventListener("transitionend", () => {
@@ -88,11 +106,6 @@ const heroInfo: HeroProps[] = [
         slider.style.transform = "translate(0)";
         setTimeout(() => {
             slider.style.transition = "all 500ms ease-in";
-            isTransitioning = false;
         })
-    });
-
-    slider.addEventListener("transitionstart", () => {
-        isTransitioning = true;
     });
 </script>
