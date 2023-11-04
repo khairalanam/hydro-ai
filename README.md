@@ -43,6 +43,10 @@ Our project aims to harness the power of artificial intelligence to monitor and 
   5. Typescript
   6. Astro Js
 
+## USAGE
+1. Access Application Using Link : https://vermillion-raindrop-3b892c.netlify.app.
+2. 
+
 ## CONTRIBUTING
 We welcome contributions from the community. To contribute to Healthcare.AI, follow these steps:
 
