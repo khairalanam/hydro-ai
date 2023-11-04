@@ -3,7 +3,7 @@
 - APPLICATION LINK : https://vermillion-raindrop-3b892c.netlify.app.
 
 ## HYDRO-AI : AI POWERED WATER QUALITY MONITORING 
-![hydro](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.mdpi.com%2F2073-4441%2F12%2F3%2F681&psig=AOvVaw00XwzF9dmY39k3mzTC1Qnt&ust=1699215000430000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCLifzaaTq4IDFQAAAAAdAAAAABAE)
+![hydro](https://www.mdpi.com/water/water-12-00681/article_deploy/html/images/water-12-00681-g001-550.jpg)
 Our project aims to harness the power of artificial intelligence to monitor and maintain the quality of water sources. We have developed an application that utilizes advanced machine learning algorithms to continuously analyze and assess various water quality parameters, including pH levels, contaminants, and temperature. The real-time monitoring system is equipped with sensors placed in strategic locations to provide accurate data. When deviations from acceptable water quality standards are detected, the system triggers alerts and notifications for prompt response and corrective action. By implementing this technology, we contribute to the preservation of our environment and the sustainable management of vital water resources.
 
 ## TABLE OF CONTENT
