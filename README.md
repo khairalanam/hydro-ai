@@ -1,4 +1,4 @@
-![Uploading Complete-system-architecture-for-water-quality-monitoring-IoT-setup (1).png…]()
+![Uploading Complete-system-architecture-for-water-quality-monitoring-IoT-setup (1).png]()
 
 # Astro Starter Kit: Basics
 
