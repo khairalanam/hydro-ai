@@ -63,6 +63,6 @@ We welcome contributions from the community. To contribute to Healthcare.AI, fol
 
 ## AUTHORS
 1. Siba Prasad Das (Machine Learning Engineer) 
-2. Khair Alanam (Full Stack Developer)
+2. Khair Alanam (FullStack Web Developer)
 
 
