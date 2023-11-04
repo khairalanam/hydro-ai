@@ -43,20 +43,7 @@ Our project aims to harness the power of artificial intelligence to monitor and 
   5. Typescript
   6. Astro Js
 
-## CONTRIBUTING
-We welcome contributions from the community. To contribute to Healthcare.AI, follow these steps:
-
-1. Fork the repository.
-2. Create a new branch for your feature: git checkout -b feature-name.
-3. Commit your changes: git commit -m "Description of changes".
-4. Push to your branch: git push origin feature-name.
-5. Open a pull request.
-
-## AUTHORS
-1. Siba Prasad Das (Machine Learning Engineer) 
-2. Khair Alanam (Full Stack Developer)
-
-# Astro Starter Kit: Basics
+## Astro Starter Kit: Basics
 
 ```sh
 npm create astro@latest -- --template basics
@@ -110,3 +97,18 @@ All commands are run from the root of the project, from a terminal:
 ## 👀 Want to learn more?
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+
+## CONTRIBUTING
+We welcome contributions from the community. To contribute to Healthcare.AI, follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature: git checkout -b feature-name.
+3. Commit your changes: git commit -m "Description of changes".
+4. Push to your branch: git push origin feature-name.
+5. Open a pull request.
+
+## AUTHORS
+1. Siba Prasad Das (Machine Learning Engineer) 
+2. Khair Alanam (Full Stack Developer)
+
+
