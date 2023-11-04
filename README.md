@@ -1,4 +1,6 @@
-## TEAM GREEN GUARDIANS
+## TEAM GREEN GUARDIANS 
+![logo](https://www.greenbirdsystems.com/wp-content/uploads/2023/02/Green-Guardian-1536x1536.png) 
+
 - OUR TRACK : GREEN TECH
 - APPLICATION LINK : https://vermillion-raindrop-3b892c.netlify.app.
 
