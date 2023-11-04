@@ -45,7 +45,8 @@ Our project aims to harness the power of artificial intelligence to monitor and 
 
 ## USAGE
 1. Access Application Using Link : https://vermillion-raindrop-3b892c.netlify.app.
-2. 
+2. Click on streamlit button at top right corner of the landing page.
+3. Enter IOT sensor data & recieve AI driven insights.
 
 ## CONTRIBUTING
 We welcome contributions from the community. To contribute to Healthcare.AI, follow these steps:
