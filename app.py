@@ -44,9 +44,17 @@ if st.button('ANALYSE'):
     user_input = pre_processors(user_input)
     # Make predictions
     result = model.predict(user_input)
-    st.success(result[0])
-
-
+    if(result == 0):
+        st.success('Safe')
+        st.success('No Immediate Action Required!')
+    else:
+        st.error('Not Safe, Immediate Action Required')
+        st.error('1. Immediate Action: Do not use the water for any purpose until the issue is resolved.')
+        st.error('2. Contact Authorities: Notify local water authorities or your water supplier about the unsafe water conditions.')
+        st.error('3. Water Testing: Arrange for comprehensive water testing to identify the specific contaminants and their levels.')
+        st.error('4. Water Treatment: Depending on the test results, follow treatment procedures recommended by experts to make the water safe for consumption and other uses.')
+        st.error('5. Regular Monitoring: Implement regular water quality monitoring to prevent future issues and ensure safe, clean water.')
+        
     
 
 
